@@ -1,0 +1,85 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--arka-plan-alt);
+  color: var(--metin-birincil);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Figma metin stilleri */
+.t-marka { font: 800 26px/1 var(--font-sora); letter-spacing: -0.5px; }
+.t-hero { font: 800 34px/39px var(--font-sora); letter-spacing: -1px; }
+.t-onboarding { font: 800 27px/33px var(--font-sora); letter-spacing: -0.6px; }
+.t-kart-baslik { font: 700 18px/normal var(--font-sora); letter-spacing: -0.2px; }
+.t-govde-onboarding { font: 400 15px/23px var(--font-inter); }
+.t-govde-l { font: 400 15px/21px var(--font-inter); }
+.t-govde-m { font: 400 13.5px/20px var(--font-inter); }
+.t-govde-s { font: 400 12.5px/17px var(--font-inter); }
+.t-govde-xs { font: 400 11.5px/17px var(--font-inter); }
+.t-etiket-bolum {
+  font: 700 12px/normal var(--font-inter);
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: var(--metin-ikincil);
+}
+.t-satir-etiket { font: 500 15px/normal var(--font-inter); }
+.t-baglanti { font: 600 14px/normal var(--font-inter); }
+.t-buton-l { font: 700 17px/normal var(--font-inter); letter-spacing: 0.2px; }
+.t-buton-s { font: 600 12.5px/normal var(--font-inter); }
+.t-premium-m { font: italic 800 19px/normal var(--font-playfair); letter-spacing: 0.2px; }
+
+.ikincil { color: var(--metin-ikincil); }
+.altin { color: var(--vurgu-altin); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 2px solid var(--vurgu-altin);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

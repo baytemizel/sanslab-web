@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Alt&#196;&#177;n ta&#195;&#167; k&#195;&#188;resi">
+<path id="Sinyal halkas&#196;&#177; 1" opacity="0.12" d="M111.5 56C111.5 86.6518 86.6518 111.5 56 111.5C25.3482 111.5 0.5 86.6518 0.5 56C0.5 25.3482 25.3482 0.5 56 0.5C86.6518 0.5 111.5 25.3482 111.5 56Z" stroke="#F4C04A"/>
+<path id="Sinyal halkas&#196;&#177; 2" opacity="0.25" d="M100.3 56C100.3 80.4662 80.4662 100.3 56 100.3C31.5338 100.3 11.7 80.4662 11.7 56C11.7 31.5338 31.5338 11.7 56 11.7C80.4662 11.7 100.3 31.5338 100.3 56Z" stroke="#F4C04A"/>
+<path id="Sinyal halkas&#196;&#177; 3" opacity="0.4" d="M90.5 56C90.5 75.0538 75.0538 90.5 56 90.5C36.9462 90.5 21.5 75.0538 21.5 56C21.5 36.9462 36.9462 21.5 56 21.5C75.0538 21.5 90.5 36.9462 90.5 56Z" stroke="#F4C04A"/>
+<circle id="K&#195;&#188;re" cx="56" cy="56" r="27" fill="url(#paint0_radial_0_5)"/>
+<g id="&#196;&#176;kon/star">
+<path id="Vector" d="M56 46.4167L58.9612 52.4158L65.5833 53.3838L60.7917 58.0508L61.9225 64.6442L56 61.5296L50.0775 64.6442L51.2083 58.0508L46.4167 53.3838L53.0387 52.4158L56 46.4167Z" stroke-width="1.91667" stroke-linecap="round" stroke-linejoin="round" stroke="#3A2A05"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_5" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.44 45.2) scale(43.2)">
+<stop stop-color="#FFD876"/>
+<stop offset="1" stop-color="#E0A02E"/>
+</radialGradient>
+</defs>
+</svg>

@@ -1,0 +1,38 @@
+/* Figma değişkenleri — ŞansLab (Koyu tema) */
+:root {
+  --metin-birincil: #f4f2ff;
+  --metin-ikincil: #a9a3d6;
+  --vurgu-altin: #ffd876;
+  --vurgu-altin-dolgu: #f4c04a;
+  --vurgu-altin-ustu: #241a05;
+  --yuzey-kart: rgba(255, 255, 255, 0.05);
+  --yuzey-top: #0e0c24;
+  --yuzey-promo: rgba(244, 192, 74, 0.1);
+  --yuzey-altin-ton: rgba(244, 192, 74, 0.12);
+  --cizgi-kenar: rgba(255, 255, 255, 0.1);
+  --cizgi-promo: rgba(244, 192, 74, 0.4);
+  --cizgi-ince: rgba(255, 255, 255, 0.09);
+  --cizgi-altin-ton: rgba(244, 192, 74, 0.28);
+  --yuzey-secili: rgba(255, 255, 255, 0.1);
+  --yuzey-kart-dolu: #1c1947;
+  --yuzey-altin-ton-guclu: rgba(244, 192, 74, 0.2);
+  --kaplama-modal: rgba(5, 4, 15, 0.7);
+  --durum-hata: #f5333b;
+  --arka-plan-alt: #0a0918;
+
+  /* Oyun renkleri */
+  --oyun-sayisal: #f5333b;
+  --oyun-super: #ffa62b;
+  --oyun-sans-topu: #ff49a3;
+  --oyun-on-numara: #9d62ff;
+  --oyun-hizli-on: #6c8bff;
+
+  --font-sora: 'Sora', system-ui, sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+
+  /* Web'de iOS durum çubuğu / ana ekran çubuğu yerine güvenli alan boşlukları */
+  --ust-bosluk: max(env(safe-area-inset-top), 12px);
+  --alt-bosluk: max(env(safe-area-inset-bottom), 16px);
+  --ekran-genislik: 390px;
+}
