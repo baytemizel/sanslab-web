@@ -1,9 +1,12 @@
 <script setup>
+import { useLocale } from '../i18n'
+
 defineProps({ size: { type: Number, default: null } })
+const { t, home } = useLocale()
 </script>
 
 <template>
-  <RouterLink to="/" class="logo" :style="size ? { fontSize: `${size}px` } : undefined" aria-label="ŞansLab ana sayfa">
+  <RouterLink :to="home" class="logo" :style="size ? { fontSize: `${size}px` } : undefined" :aria-label="t.nav.home">
     <span>Şans</span><span class="altin">Lab</span>
   </RouterLink>
 </template>

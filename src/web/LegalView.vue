@@ -1,6 +1,6 @@
 <script setup>
 // Yasal metin sayfası — Gizlilik, Kullanım Şartları, KVKK (TR) · Privacy, Terms, GDPR (EN)
-import { computed, watchEffect, onBeforeUnmount } from 'vue'
+import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import WebNav from './components/WebNav.vue'
 import WebFooter from './components/WebFooter.vue'
@@ -13,13 +13,9 @@ const router = useRouter()
 const entry = computed(() => LEGAL_DOCS[props.docKey])
 const doc = computed(() => entry.value.doc)
 const ui = computed(() => UI[entry.value.lang])
-const alt = computed(() => entry.value.alt && LEGAL_DOCS[entry.value.alt])
 const related = computed(() =>
   RELATED[entry.value.lang].filter((k) => k !== props.docKey).map((k) => LEGAL_DOCS[k]),
 )
-
-watchEffect(() => (document.documentElement.lang = entry.value.lang))
-onBeforeUnmount(() => (document.documentElement.lang = 'tr'))
 
 // Metin içindeki site içi bağlantılar (ör. /kvkk) tam sayfa yenilemeden açılsın.
 function onContentClick(e) {
@@ -36,12 +32,9 @@ function onContentClick(e) {
     <WebNav />
     <main class="sayfa" @click="onContentClick">
       <header class="baslik-alani">
-        <Eyebrow>{{ entry.lang === 'tr' ? 'Yasal' : 'Legal' }}</Eyebrow>
+        <Eyebrow>{{ ui.eyebrow }}</Eyebrow>
         <h1>{{ doc.title }}</h1>
-        <div class="ust-bilgi">
-          <span>{{ doc.updated }}</span>
-          <RouterLink v-if="alt" :to="alt.path" class="dil" :hreflang="alt.lang">{{ ui.alt }}</RouterLink>
-        </div>
+        <p class="ust-bilgi">{{ doc.updated }}</p>
       </header>
 
       <div class="giris">
@@ -109,22 +102,7 @@ h1 {
   color: var(--metin-birincil);
 }
 .ust-bilgi {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 16px;
   font-size: 13.5px;
-}
-.dil {
-  padding: 4px 12px;
-  border: 1px solid var(--cizgi-kenar);
-  border-radius: 999px;
-  font-weight: 600;
-  color: var(--metin-birincil);
-}
-.dil:hover {
-  border-color: var(--cizgi-altin-ton);
-  color: var(--vurgu-altin);
 }
 .giris,
 .bolum {

@@ -5,13 +5,8 @@ export const STORE_LINKS = {
   googlePlay: 'https://play.google.com/store',
 }
 
-export const NAV_LINKS = [
-  { id: 'oyunlar', label: 'Oyunlar' },
-  { id: 'ozellikler', label: 'Özellikler' },
-  { id: 'sansformulu', label: 'ŞansFormülü' },
-  { id: 'ekranlar', label: 'Ekranlar' },
-  { id: 'premium', label: 'Premium' },
-]
+// Ana sayfa bölüm kimlikleri (her iki dilde aynı); etiketler i18n/*.js → nav
+export const NAV_LINKS = ['oyunlar', 'ozellikler', 'sansformulu', 'ekranlar', 'premium']
 
 export const DEMO_ROUTE = { name: 'home' }
 
@@ -20,10 +15,4 @@ export const CONTACT = {
   email: 'support@odit.com.tr',
 }
 
-// Rotalar: src/router.js · içerik: src/web/legal
-export const LEGAL_LINKS = {
-  privacy: '/gizlilik',
-  terms: '/kullanim-kosullari',
-  kvkk: '/kvkk',
-  deleteAccount: '/hesap-silme',
-}
+// Yasal sayfa bağlantıları dile göre i18n/*.js → footer.links içinde

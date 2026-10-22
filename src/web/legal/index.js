@@ -7,13 +7,13 @@ import privacy from './docs/privacy.js'
 import terms from './docs/terms.js'
 import gdpr from './docs/gdpr.js'
 
-// path: sitedeki adres · alt: diğer dildeki karşılığı
+// path: sitedeki adres (diğer dildeki karşılıklar router.js'te meta.alt)
 export const LEGAL_DOCS = {
-  gizlilik: { path: '/gizlilik', lang: 'tr', doc: gizlilik, alt: 'privacy' },
-  'kullanim-sartlari': { path: '/kullanim-kosullari', lang: 'tr', doc: kullanimSartlari, alt: 'terms' },
+  gizlilik: { path: '/gizlilik', lang: 'tr', doc: gizlilik },
+  'kullanim-sartlari': { path: '/kullanim-kosullari', lang: 'tr', doc: kullanimSartlari },
   kvkk: { path: '/kvkk', lang: 'tr', doc: kvkk },
-  privacy: { path: '/en/privacy', lang: 'en', doc: privacy, alt: 'gizlilik' },
-  terms: { path: '/en/terms', lang: 'en', doc: terms, alt: 'kullanim-sartlari' },
+  privacy: { path: '/en/privacy', lang: 'en', doc: privacy },
+  terms: { path: '/en/terms', lang: 'en', doc: terms },
   gdpr: { path: '/en/gdpr', lang: 'en', doc: gdpr },
 }
 
@@ -24,6 +24,6 @@ export const RELATED = {
 }
 
 export const UI = {
-  tr: { toc: 'İçindekiler', related: 'Diğer yasal metinler', alt: 'English', back: 'Ana sayfaya dön' },
-  en: { toc: 'Contents', related: 'Other legal documents', alt: 'Türkçe', back: 'Back to home' },
+  tr: { eyebrow: 'Yasal', toc: 'İçindekiler', related: 'Diğer yasal metinler' },
+  en: { eyebrow: 'Legal', toc: 'Contents', related: 'Other legal documents' },
 }

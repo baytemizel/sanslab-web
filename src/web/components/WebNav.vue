@@ -1,11 +1,14 @@
 <script setup>
-// "Web/Nav — Masaüstü" (80px) / "Web/Nav — Mobil" (64px, menü butonu)
+// "Web/Nav — Masaüstü" (80px) / "Web/Nav — Mobil" (64px, menü butonu) + dil seçici
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import AppIcon from '@/components/AppIcon.vue'
 import Logo from './Logo.vue'
+import LangSwitcher from './LangSwitcher.vue'
 import { NAV_LINKS } from '../links'
+import { useLocale } from '../i18n'
 
+const { t, section } = useLocale()
 const open = ref(false)
 const route = useRoute()
 watch(() => route.fullPath, () => (open.value = false))
@@ -15,26 +18,27 @@ watch(() => route.fullPath, () => (open.value = false))
   <header class="nav" :class="{ acik: open }">
     <div class="ic">
       <Logo class="logo" />
-      <nav class="baglantilar" aria-label="Sayfa bölümleri">
-        <RouterLink v-for="l in NAV_LINKS" :key="l.id" :to="{ name: 'landing', hash: `#${l.id}` }">{{ l.label }}</RouterLink>
+      <nav class="baglantilar" :aria-label="t.nav.sections">
+        <RouterLink v-for="id in NAV_LINKS" :key="id" :to="section(id)">{{ t.nav[id] }}</RouterLink>
       </nav>
-      <RouterLink :to="{ name: 'landing', hash: '#indir' }" class="indir">İndir</RouterLink>
-      <button
-        type="button"
-        class="menu-buton"
-        :aria-expanded="open"
-        aria-controls="mobil-menu"
-        :aria-label="open ? 'Menüyü kapat' : 'Menüyü aç'"
-        @click="open = !open"
-      >
-        <AppIcon :name="open ? 'x' : 'menu'" :size="20" color="var(--metin-birincil)" />
-      </button>
+      <div class="sag">
+        <RouterLink :to="section('indir')" class="indir">{{ t.nav.download }}</RouterLink>
+        <LangSwitcher />
+        <button
+          type="button"
+          class="menu-buton"
+          :aria-expanded="open"
+          aria-controls="mobil-menu"
+          :aria-label="open ? t.nav.closeMenu : t.nav.openMenu"
+          @click="open = !open"
+        >
+          <AppIcon :name="open ? 'x' : 'menu'" :size="20" color="var(--metin-birincil)" />
+        </button>
+      </div>
     </div>
-    <nav v-show="open" id="mobil-menu" class="mobil-menu" aria-label="Sayfa bölümleri">
-      <RouterLink v-for="l in NAV_LINKS" :key="l.id" :to="{ name: 'landing', hash: `#${l.id}` }" @click="open = false">
-        {{ l.label }}
-      </RouterLink>
-      <RouterLink :to="{ name: 'landing', hash: '#indir' }" class="indir indir--mobil" @click="open = false">İndir</RouterLink>
+    <nav v-show="open" id="mobil-menu" class="mobil-menu" :aria-label="t.nav.sections">
+      <RouterLink v-for="id in NAV_LINKS" :key="id" :to="section(id)" @click="open = false">{{ t.nav[id] }}</RouterLink>
+      <RouterLink :to="section('indir')" class="indir indir--mobil" @click="open = false">{{ t.nav.download }}</RouterLink>
     </nav>
   </header>
 </template>
@@ -59,8 +63,13 @@ watch(() => route.fullPath, () => (open.value = false))
   font-size: 20px;
 }
 .baglantilar,
-.ic > .indir {
+.sag > .indir {
   display: none;
+}
+.sag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .baglantilar {
   gap: 36px;
@@ -119,7 +128,10 @@ watch(() => route.fullPath, () => (open.value = false))
   .baglantilar {
     display: flex;
   }
-  .ic > .indir {
+  .sag {
+    gap: 12px;
+  }
+  .sag > .indir {
     display: inline-flex;
   }
   .menu-buton,

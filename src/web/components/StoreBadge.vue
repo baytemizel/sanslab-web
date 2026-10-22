@@ -3,11 +3,13 @@
 import appStoreLogo from '@/assets/web/app-store-logo.svg'
 import googlePlayLogo from '@/assets/web/google-play-logo.svg'
 import { STORE_LINKS } from '../links'
+import { useLocale } from '../i18n'
 
 const props = defineProps({
   store: { type: String, default: 'app-store' }, // app-store | google-play
 })
 const isGoogle = props.store === 'google-play'
+const { t } = useLocale()
 </script>
 
 <template>
@@ -19,8 +21,8 @@ const isGoogle = props.store === 'google-play'
       alt=""
     />
     <span class="metin">
-      <span class="ust">{{ isGoogle ? "Google Play'den" : "App Store'dan" }}</span>
-      <span class="alt">İndir</span>
+      <span class="ust">{{ t.store[isGoogle ? 'googlePlay' : 'appStore'][0] }}</span>
+      <span class="alt">{{ t.store[isGoogle ? 'googlePlay' : 'appStore'][1] }}</span>
     </span>
   </a>
 </template>

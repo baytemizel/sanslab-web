@@ -2,11 +2,14 @@
 // "Canlı demo bağlantısı" — uygulamanın web sürümünü yeni sekmede açar.
 import AppIcon from '@/components/AppIcon.vue'
 import { DEMO_ROUTE } from '../links'
+import { useLocale } from '../i18n'
+
+const { t } = useLocale()
 </script>
 
 <template>
   <RouterLink :to="DEMO_ROUTE" target="_blank" class="demo">
-    Tarayıcıda dene — canlı demo
+    {{ t.demo }}
     <AppIcon name="external-link" :size="15" color="var(--vurgu-altin)" />
   </RouterLink>
 </template>

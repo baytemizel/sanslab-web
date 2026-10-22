@@ -2,6 +2,7 @@
 // "Oyun/…" kartı — masaüstü 16:2491 / mobil 17:3464
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import GlowOrb from '@/components/GlowOrb.vue'
+import { useLocale } from '../../i18n'
 
 defineProps({
   id: { type: String, required: true },
@@ -10,6 +11,8 @@ defineProps({
   rule: { type: String, required: true }, // ikincil renkli satır
   extra: { type: String, default: '' }, // oyun renginde vurgulu satır
 })
+
+const { t } = useLocale()
 
 // Küre: mobil 44px, masaüstü 52px
 const mq = typeof window !== 'undefined' ? window.matchMedia('(min-width: 1024px)') : null
@@ -25,7 +28,7 @@ onBeforeUnmount(() => mq?.removeEventListener('change', onChange))
     :to="{ name: 'game', params: { gameId: id } }"
     target="_blank"
     rel="noopener"
-    :aria-label="`${name} — canlı demoda dene (yeni sekme)`"
+    :aria-label="`${name} — ${t.games.tryDemo}`"
   >
     <GlowOrb :color="color" :size="orbSize" />
     <h3 class="ad">{{ name }}</h3>

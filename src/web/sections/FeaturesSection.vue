@@ -3,41 +3,16 @@
 import SectionHeading from '../components/SectionHeading.vue'
 import FeatureCard from '../components/features/FeatureCard.vue'
 
-const features = [
-  { icon: 'zap', title: 'Saniyeler içinde kupon', text: 'Oyun seç, dokun — tekli ya da tek dokunuşla 10 kupon. İkisi de ücretsiz.' },
-  {
-    icon: 'cpu',
-    title: 'Kriptografik rastgelelik',
-    text: 'CSPRNG + reddetme örneklemesi: modülo yanlılığı yok, her sayı gerçekten eşit olasılıklı.',
-  },
-  {
-    icon: 'sliders',
-    title: '4 üretim modu',
-    text: 'Tam Rastgele · Dengeli · Az Paylaşılan · ŞansFormülü — her biri ne yaptığını açıkça söyler.',
-  },
-  {
-    icon: 'bar-chart-2',
-    title: 'Sayı istatistikleri',
-    text: 'Sıklık grafiği, en sık / en seyrek toplar ve “dağılım adil mi?” okuması.',
-  },
-  {
-    icon: 'moon',
-    title: 'Gece & Gündüz teması',
-    text: 'Parlayan çekiliş topları ve altın vurgularla “Gece Çekilişi” tasarımı; aydınlık varyantıyla.',
-  },
-  {
-    icon: 'globe',
-    title: 'TR & EN · çevrimdışı',
-    text: 'Tam yerelleştirme; internet olmadan da kupon üretir. Kuponu tek dokunuşla kopyala.',
-  },
-]
+import { useLocale } from '../i18n'
+
+const { t } = useLocale()
 </script>
 
 <template>
   <section class="ozellikler">
-    <SectionHeading eyebrow="Özellikler" title="Hızlı, adil, akıllı" />
+    <SectionHeading :eyebrow="t.features.eyebrow" :title="t.features.title" />
     <div class="kartlar">
-      <FeatureCard v-for="f in features" :key="f.icon" :icon="f.icon" :title="f.title" :text="f.text" />
+      <FeatureCard v-for="f in t.features.items" :key="f.icon" :icon="f.icon" :title="f.title" :text="f.text" />
     </div>
   </section>
 </template>

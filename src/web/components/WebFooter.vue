@@ -1,7 +1,10 @@
 <script setup>
 // "Web/Footer — Masaüstü" / "Web/Footer — Mobil"
 import Logo from './Logo.vue'
-import { CONTACT, DEMO_ROUTE, LEGAL_LINKS } from '../links'
+import { CONTACT, DEMO_ROUTE } from '../links'
+import { useLocale } from '../i18n'
+
+const { t, section } = useLocale()
 </script>
 
 <template>
@@ -9,25 +12,22 @@ import { CONTACT, DEMO_ROUTE, LEGAL_LINKS } from '../links'
     <div class="ust">
       <div class="marka">
         <Logo :size="26" />
-        <p class="aciklama">Şans oyunları için akıllı kupon üreteci. Eğlence amaçlıdır; kazanç vaat etmez.</p>
+        <p class="aciklama">{{ t.footer.tagline }}</p>
       </div>
       <div class="sutunlar">
-        <nav class="sutun" aria-label="Uygulama">
-          <h2>Uygulama</h2>
-          <RouterLink :to="{ name: 'landing', hash: '#oyunlar' }">Oyunlar</RouterLink>
-          <RouterLink :to="{ name: 'landing', hash: '#ozellikler' }">Özellikler</RouterLink>
-          <RouterLink :to="{ name: 'landing', hash: '#premium' }">Premium</RouterLink>
-          <RouterLink :to="DEMO_ROUTE" target="_blank">Canlı demo</RouterLink>
+        <nav class="sutun" :aria-label="t.footer.app">
+          <h2>{{ t.footer.app }}</h2>
+          <RouterLink :to="section('oyunlar')">{{ t.nav.oyunlar }}</RouterLink>
+          <RouterLink :to="section('ozellikler')">{{ t.nav.ozellikler }}</RouterLink>
+          <RouterLink :to="section('premium')">{{ t.nav.premium }}</RouterLink>
+          <RouterLink :to="DEMO_ROUTE" target="_blank">{{ t.footer.demo }}</RouterLink>
         </nav>
-        <nav class="sutun" aria-label="Yasal">
-          <h2>Yasal</h2>
-          <RouterLink :to="LEGAL_LINKS.privacy">Gizlilik Politikası</RouterLink>
-          <RouterLink :to="LEGAL_LINKS.terms">Kullanım Koşulları</RouterLink>
-          <RouterLink :to="LEGAL_LINKS.kvkk">KVKK Aydınlatma Metni</RouterLink>
-          <RouterLink :to="LEGAL_LINKS.deleteAccount">Hesap Silme</RouterLink>
+        <nav class="sutun" :aria-label="t.footer.legal">
+          <h2>{{ t.footer.legal }}</h2>
+          <RouterLink v-for="l in t.footer.links" :key="l.to" :to="l.to">{{ l.label }}</RouterLink>
         </nav>
         <div class="sutun">
-          <h2>İletişim</h2>
+          <h2>{{ t.footer.contact }}</h2>
           <a :href="`mailto:${CONTACT.email}`">{{ CONTACT.email }}</a>
         </div>
       </div>
@@ -35,7 +35,7 @@ import { CONTACT, DEMO_ROUTE, LEGAL_LINKS } from '../links'
     <hr class="ayrac" />
     <div class="alt">
       <p>© 2026 Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş.</p>
-      <p>18+ · Milli Piyango İdaresi veya herhangi bir oyun operatörüyle bağlantılı değildir.</p>
+      <p>{{ t.footer.disclaimer }}</p>
     </div>
   </footer>
 </template>

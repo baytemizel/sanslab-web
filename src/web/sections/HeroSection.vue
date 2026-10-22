@@ -6,6 +6,9 @@ import StoreBadge from '../components/StoreBadge.vue'
 import DemoLink from '../components/DemoLink.vue'
 import telefon from '@/assets/web/hero-telefon.webp'
 import telefonMobil from '@/assets/web/hero-telefon-mobil.webp'
+import { useLocale } from '../i18n'
+
+const { t } = useLocale()
 
 const balls = [
   { n: 7, color: '#f5333b' },
@@ -19,12 +22,9 @@ const balls = [
 <template>
   <section class="hero">
     <div class="metin">
-      <Eyebrow>5 Şans Oyunu · Ücretsiz</Eyebrow>
-      <h1 class="baslik">Şansını dene,<br /><span class="altin">kuponunu üret</span></h1>
-      <p class="aciklama">
-        Sayısal Loto, Süper Loto, Şans Topu, On Numara ve Hızlı On için saniyeler içinde kupon. Kriptografik
-        rastgelelik, akıllı üretim modları, Türkçe ve İngilizce.
-      </p>
+      <Eyebrow>{{ t.hero.eyebrow }}</Eyebrow>
+      <h1 class="baslik">{{ t.hero.title[0] }}<br /><span class="altin">{{ t.hero.title[1] }}</span></h1>
+      <p class="aciklama">{{ t.hero.text }}</p>
       <div class="rozetler">
         <StoreBadge store="app-store" />
         <StoreBadge store="google-play" />
@@ -44,7 +44,7 @@ const balls = [
           :src="telefonMobil"
           width="323"
           height="677"
-          alt="ŞansLab uygulamasının ana ekranı: oyun seçimi ve Premium şeridi"
+          :alt="t.hero.alt"
           fetchpriority="high"
         />
       </picture>

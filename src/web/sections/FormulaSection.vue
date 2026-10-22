@@ -4,12 +4,9 @@ import AppIcon from '@/components/AppIcon.vue'
 import Eyebrow from '../components/Eyebrow.vue'
 import StatCard from '../components/formula/StatCard.vue'
 
-const stats = [
-  { value: '3.496', label: 'temiz çekiliş analiz edildi' },
-  { value: '7', label: 'skor bileşeni' },
-  { value: '6.000', label: 'aday kombinasyon her üretimde' },
-  { value: '~4.9/6', label: 'kupon başına sıcak-liste sayısı' },
-]
+import { useLocale } from '../i18n'
+
+const { t } = useLocale()
 </script>
 
 <template>
@@ -18,27 +15,21 @@ const stats = [
       <div class="metin">
         <!-- Sola hizalı "Bölüm başlığı" (SectionHeading ortalı olduğu için burada ayrı kuruldu) -->
         <header class="baslik-blok">
-          <Eyebrow>ŞansFormülü</Eyebrow>
-          <h2 class="baslik">Arşiv analizli bileşik skor</h2>
-          <p class="alt">
-            3.496 temiz çekilişlik Milli Piyango arşivi analiz edildi; format değişimleri veriden tespit edilip dönemler
-            ayrıştırıldı. Formül yedi bileşenle her kombinasyonu puanlar, binlerce aday arasından en yüksek skorluyu
-            seçer.
-          </p>
+          <Eyebrow>{{ t.formula.eyebrow }}</Eyebrow>
+          <h2 class="baslik">{{ t.formula.title }}</h2>
+          <p class="alt">{{ t.formula.text }}</p>
         </header>
         <div class="formul">
-          <p class="denklem">SKOR = 0.15·F + 0.10·R + 0.10·G + 0.10·P + 0.15·S + 0.10·B + 0.30·A</p>
-          <p class="bilesenler">
-            frekans · son-50 form · gecikme · ikili sinerji · toplam bandı · desen uyumu · anti-kalabalık
-          </p>
+          <p class="denklem">{{ t.formula.equation }}</p>
+          <p class="bilesenler">{{ t.formula.components }}</p>
         </div>
         <p class="not">
           <AppIcon class="not-ikon" name="shield" :size="15" color="var(--vurgu-altin)" />
-          <span>Kazanma olasılığını artırmaz; istatistiksel olarak skorlanmış kombinasyon üretir.</span>
+          <span>{{ t.formula.note }}</span>
         </p>
       </div>
       <div class="sayilar">
-        <StatCard v-for="s in stats" :key="s.value" :value="s.value" :label="s.label" />
+        <StatCard v-for="s in t.formula.stats" :key="s.label" :value="s.value" :label="s.label" />
       </div>
     </div>
   </section>

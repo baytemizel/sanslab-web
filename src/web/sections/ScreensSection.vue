@@ -6,29 +6,28 @@ import ekranOyun from '@/assets/web/ekran-oyun.webp'
 import ekranIstatistik from '@/assets/web/ekran-istatistik.webp'
 import ekranGecmis from '@/assets/web/ekran-gecmis.webp'
 import ekranAnaSayfa from '@/assets/web/ekran-ana-sayfa-acik.webp'
+import { useLocale } from '../i18n'
 
-// mobil: true → mobil Figma çerçevesinde de görünür (mobilde yalnızca 2 telefon var)
+const { t } = useLocale()
+
+// mobil: true → mobil Figma çerçevesinde de görünür (mobilde yalnızca 2 telefon var); alt metinler t.screens.alts sırasıyla
 const phones = [
-  { src: ekranOyun, mobil: true, alt: 'Sayısal Loto oyun ekranı: üretim modu seçimi ve üretilen kupon (koyu tema)' },
-  { src: ekranIstatistik, mobil: false, alt: 'Sayısal Loto sayı istatistikleri ekranı: en sık ve en seyrek çıkan sayılar' },
-  { src: ekranGecmis, mobil: false, alt: 'Kupon geçmişi ekranı: favoriler ve oyunlara göre kayıtlı kuponlar' },
-  { src: ekranAnaSayfa, mobil: true, alt: 'Açık temada ana sayfa: oyun seçimi ve Premium şeridi' },
+  { src: ekranOyun, mobil: true },
+  { src: ekranIstatistik, mobil: false },
+  { src: ekranGecmis, mobil: false },
+  { src: ekranAnaSayfa, mobil: true },
 ]
 </script>
 
 <template>
   <section class="ekranlar">
-    <SectionHeading
-      eyebrow="EKRANLAR"
-      title="Gece Çekilişi tasarımı"
-      subtitle="Koyu ve açık temada, her ekran aynı imza dille."
-    />
+    <SectionHeading :eyebrow="t.screens.eyebrow" :title="t.screens.title" :subtitle="t.screens.subtitle" />
     <div class="telefonlar">
       <PhoneShot
-        v-for="p in phones"
+        v-for="(p, i) in phones"
         :key="p.src"
         :src="p.src"
-        :alt="p.alt"
+        :alt="t.screens.alts[i]"
         class="telefonlar__oge"
         :class="{ 'telefonlar__oge--genis': !p.mobil }"
       />

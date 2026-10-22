@@ -3,46 +3,37 @@
 import SectionHeading from '../components/SectionHeading.vue'
 import PlanCard from '../components/premium/PlanCard.vue'
 
-const freeFeatures = [
-  'Tüm 5 oyun',
-  "Tekli ve 10'lu kupon",
-  'Tam Rastgele modu',
-  'Sayı istatistikleri',
-  'Son 10 kupon ve 3 favori',
-  'Reklam destekli',
-]
-const premiumFeatures = [
-  'Reklamsız deneyim',
-  'Dengeli · Az Paylaşılan · ŞansFormülü',
-  'Sınırsıza yakın geçmiş ve favoriler',
-  'Geçmişi tek dokunuşla dışa aktar',
-  'Yeni özelliklere erken erişim',
-]
+import { useLocale } from '../i18n'
+
+const { t } = useLocale()
 </script>
 
 <template>
   <section class="premium">
-    <SectionHeading eyebrow="PREMIUM" title="Temel ücretsiz, Premium ayrıcalık" />
+    <SectionHeading :eyebrow="t.premium.eyebrow" :title="t.premium.title" />
 
     <div class="planlar">
-      <PlanCard class="plan-ucretsiz" title="Ücretsiz" price="$0" period="her zaman" :features="freeFeatures" />
+      <PlanCard
+        class="plan-ucretsiz"
+        :title="t.premium.free.title"
+        :price="t.premium.free.price"
+        :period="t.premium.free.period"
+        :features="t.premium.freeFeatures"
+      />
       <PlanCard
         class="plan-premium"
         variant="premium"
-        title="Premium"
-        price="$4,90"
-        period="/ yıl  ·  ya da $0,49 / ay"
-        :features="premiumFeatures"
+        :title="t.premium.paid.title"
+        :price="t.premium.paid.price"
+        :period="t.premium.paid.period"
+        :features="t.premium.premiumFeatures"
       >
         <!-- Premium uygulama içinden alınır → indirme bandına götürür -->
-        <a class="cta" href="#indir">Uygulamada Premium'a geç</a>
+        <a class="cta" href="#indir">{{ t.premium.cta }}</a>
       </PlanCard>
     </div>
 
-    <p class="yasal">
-      Abonelik mağaza hesabından faturalandırılır; dönem bitiminden en az 24 saat önce iptal edilmezse otomatik
-      yenilenir.
-    </p>
+    <p class="yasal">{{ t.premium.legal }}</p>
   </section>
 </template>
 

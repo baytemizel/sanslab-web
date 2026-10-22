@@ -1,27 +1,21 @@
 <script setup>
 // Figma: Oyunlar — masaüstü 16:2484 / mobil 17:3457
+import { computed } from 'vue'
 import { GAMES } from '@/data/games.js'
 import SectionHeading from '../components/SectionHeading.vue'
 import GameCard from '../components/games/GameCard.vue'
+import { useLocale } from '../i18n'
 
+const { t } = useLocale()
 // Kural satırları Figma'daki iki satırlı yazımla (games.js'teki tek satırlık özetten farklı)
-const RULES = {
-  'sayisal-loto': ['6 sayı (1–90)', '+ Joker'],
-  'super-loto': ['6 sayı (1–60)', ''],
-  'sans-topu': ['5 sayı (1–34)', '+ 1 (1–14)'],
-  'on-numara': ['10 sayı (1–80)', ''],
-  'hizli-on': ['1–10 sayı seç', '(1–80)'],
-}
-const cards = GAMES.map((g) => ({ ...g, rule: RULES[g.id][0], extra: RULES[g.id][1] }))
+const cards = computed(() =>
+  GAMES.map((g) => ({ ...g, rule: t.value.games.rules[g.id][0], extra: t.value.games.rules[g.id][1] })),
+)
 </script>
 
 <template>
   <section class="oyunlar">
-    <SectionHeading
-      eyebrow="Oyunlar"
-      title="Beş oyun, tek yer"
-      subtitle="Her oyunun kuralı doğru, kuponun saniyeler içinde hazır."
-    />
+    <SectionHeading :eyebrow="t.games.eyebrow" :title="t.games.title" :subtitle="t.games.subtitle" />
     <div class="kartlar">
       <GameCard
         v-for="c in cards"

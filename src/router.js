@@ -10,22 +10,29 @@ const routes = [
     path: '/',
     name: 'landing',
     component: () => import('./web/LandingView.vue'),
-    meta: { title: 'ŞansLab — Şansını dene, kuponunu üret' },
+    meta: { title: 'ŞansLab — Şansını dene, kuponunu üret', lang: 'tr' },
+  },
+  {
+    path: '/en',
+    name: 'landing-en',
+    component: () => import('./web/LandingView.vue'),
+    meta: { title: 'ŞansLab — Try your luck, generate your ticket', lang: 'en' },
   },
   // Yasal metinler (src/web/legal) — mağaza kayıtlarında bu adresler kullanılır
+  // alt: dil seçicide diğer dildeki karşılık (KVKK ↔ GDPR bildirimleri)
   ...[
-    ['/gizlilik', 'gizlilik', 'Gizlilik Politikası'],
-    ['/kullanim-kosullari', 'kullanim-sartlari', 'Kullanım Şartları'],
-    ['/kvkk', 'kvkk', 'KVKK Aydınlatma Metni'],
-    ['/en/privacy', 'privacy', 'Privacy Policy'],
-    ['/en/terms', 'terms', 'Terms of Use'],
-    ['/en/gdpr', 'gdpr', 'GDPR Privacy Notice'],
-  ].map(([path, docKey, title]) => ({
+    ['/gizlilik', 'gizlilik', 'Gizlilik Politikası', 'tr', '/en/privacy'],
+    ['/kullanim-kosullari', 'kullanim-sartlari', 'Kullanım Şartları', 'tr', '/en/terms'],
+    ['/kvkk', 'kvkk', 'KVKK Aydınlatma Metni', 'tr', '/en/gdpr'],
+    ['/en/privacy', 'privacy', 'Privacy Policy', 'en', '/gizlilik'],
+    ['/en/terms', 'terms', 'Terms of Use', 'en', '/kullanim-kosullari'],
+    ['/en/gdpr', 'gdpr', 'GDPR Privacy Notice', 'en', '/kvkk'],
+  ].map(([path, docKey, title, lang, alt]) => ({
     path,
     name: `legal-${docKey}`,
     component: () => import('./web/LegalView.vue'),
     props: { docKey },
-    meta: { title },
+    meta: { title, lang, alt },
   })),
   // Hesap yok; silme talimatları Gizlilik Politikası'nın 7. bölümünde.
   { path: '/hesap-silme', redirect: { path: '/gizlilik', hash: '#hesap-ve-verilerin-silinmesi' } },
@@ -86,6 +93,7 @@ router.beforeEach((to) => {
 
 router.afterEach((to) => {
   const game = to.params.gameId && gameById(to.params.gameId)
-  if (to.name === 'landing') document.title = to.meta.title
+  document.documentElement.lang = to.meta.lang || 'tr'
+  if (to.name === 'landing' || to.name === 'landing-en') document.title = to.meta.title
   else document.title = `${game ? game.name : to.meta.title || 'Uygulama'} · ŞansLab`
 })

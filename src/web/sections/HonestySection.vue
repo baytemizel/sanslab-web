@@ -2,6 +2,9 @@
 // Figma: Dürüstlük ve indirme — masaüstü 16:3138 / mobil 17:3808
 import AppIcon from '@/components/AppIcon.vue'
 import StoreBadge from '../components/StoreBadge.vue'
+import { useLocale } from '../i18n'
+
+const { t } = useLocale()
 </script>
 
 <template>
@@ -13,20 +16,15 @@ import StoreBadge from '../components/StoreBadge.vue'
         <AppIcon class="kalkan__ikon kalkan__ikon--masaustu" name="shield" :size="24" color="var(--vurgu-altin-ustu)" />
       </span>
       <div class="kart__metin">
-        <h2 class="kart__baslik">Şeffaf ve dürüst</h2>
-        <p class="kart__aciklama">
-          Şans oyunlarında her çekiliş bağımsızdır. Geçmiş sonuçlar geleceği tahmin etmez ve hiçbir yöntem —
-          ŞansFormülü dahil — kazanma olasılığını artırmaz. ŞansLab yalnızca kupon doldurmayı kolaylaştıran bir
-          eğlence aracıdır; gerçek para ile oyun, bahis veya kupon satışı içermez. 18+ · Milli Piyango İdaresi ile
-          bağlantılı değildir.
-        </p>
+        <h2 class="kart__baslik">{{ t.honesty.title }}</h2>
+        <p class="kart__aciklama">{{ t.honesty.text }}</p>
       </div>
     </div>
 
     <!-- "İndirme bandı" — nav'daki "İndir" butonu buraya bağlanır -->
     <div id="indir" class="bant">
-      <h2 class="bant__baslik">Kuponunu şimdi üret</h2>
-      <p class="bant__alt">Ücretsiz indir · Üyelik gerekmez · 18+</p>
+      <h2 class="bant__baslik">{{ t.honesty.bandTitle }}</h2>
+      <p class="bant__alt">{{ t.honesty.bandText }}</p>
       <div class="rozetler">
         <StoreBadge store="app-store" />
         <StoreBadge store="google-play" />
