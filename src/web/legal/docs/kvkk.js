@@ -15,7 +15,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "Veri sorumlusu: Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş. — İstanbul, Türkiye. İletişim: <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a>"
+          "html": "Veri sorumlusu: Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş. — İstanbul, Türkiye. İletişim: <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a>"
         }
       ]
     },
@@ -126,7 +126,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "Haklarınıza ilişkin taleplerinizi, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun olarak; kimliğinizi tevsik edici bilgilerle birlikte <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a> adresine iletebilirsiniz. Başvurular en geç 30 (otuz) gün içinde ücretsiz olarak sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu'nca belirlenen tarife uygulanabilir. Başvurunuzun reddedilmesi, verilen cevabı yetersiz bulmanız veya süresinde cevap verilmemesi hâllerinde Kişisel Verileri Koruma Kurulu'na şikâyette bulunma hakkınız saklıdır."
+          "html": "Haklarınıza ilişkin taleplerinizi, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun olarak; kimliğinizi tevsik edici bilgilerle birlikte <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a> adresine iletebilirsiniz. Başvurular en geç 30 (otuz) gün içinde ücretsiz olarak sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu'nca belirlenen tarife uygulanabilir. Başvurunuzun reddedilmesi, verilen cevabı yetersiz bulmanız veya süresinde cevap verilmemesi hâllerinde Kişisel Verileri Koruma Kurulu'na şikâyette bulunma hakkınız saklıdır."
         }
       ]
     },

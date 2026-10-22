@@ -147,7 +147,7 @@ export default {
           "type": "list",
           "items": [
             "<strong>Yerel verilerin silinmesi:</strong> Uygulamayı cihazınızdan kaldırdığınızda kuponlar ve tercihler dâhil tüm yerel veriler silinir.",
-            "<strong>Sunucu tarafı kayıtların silinmesi:</strong> <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a> adresine başvurarak analitik, çökme ve abonelik doğrulama kayıtlarınızla ilişkili tanımlayıcıların silinmesini talep edebilirsiniz; talebiniz en geç 30 gün içinde sonuçlandırılır.",
+            "<strong>Sunucu tarafı kayıtların silinmesi:</strong> <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a> adresine başvurarak analitik, çökme ve abonelik doğrulama kayıtlarınızla ilişkili tanımlayıcıların silinmesini talep edebilirsiniz; talebiniz en geç 30 gün içinde sonuçlandırılır.",
             "<strong>Reklam tanımlayıcısının sıfırlanması:</strong> iOS: Ayarlar → Gizlilik ve Güvenlik → Takip; Android: Ayarlar → Google → Reklamlar üzerinden tanımlayıcıyı sıfırlayabilir veya kişiselleştirmeyi kapatabilirsiniz.",
             "<strong>Önemli:</strong> Uygulamayı silmek Premium aboneliğinizi otomatik olarak iptal etmez. Aboneliği App Store veya Google Play hesabınızın abonelik ayarlarından iptal etmeniz gerekir."
           ]
@@ -190,7 +190,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "Sorularınız ve talepleriniz için: <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a> — Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., İstanbul, Türkiye."
+          "html": "Sorularınız ve talepleriniz için: <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a> — Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., İstanbul, Türkiye."
         }
       ]
     }

@@ -2,7 +2,7 @@
 export const LINKS = {
   privacy: '/gizlilik',
   terms: '/kullanim-kosullari',
-  support: 'mailto:support@odit.com.tr',
+  support: 'mailto:support@oditteknoloji.com',
 }
 
 // Figma "Sürüm" satırındaki değer.

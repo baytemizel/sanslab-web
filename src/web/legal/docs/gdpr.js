@@ -15,7 +15,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "The data controller is Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., Istanbul, Türkiye. Contact: <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a>. The Company has not appointed a Data Protection Officer, as it is not required to do so under Article 37 GDPR."
+          "html": "The data controller is Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., Istanbul, Türkiye. Contact: <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a>. The Company has not appointed a Data Protection Officer, as it is not required to do so under Article 37 GDPR."
         }
       ]
     },
@@ -70,7 +70,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "Our processors store data primarily in the United States. Transfers are safeguarded by the EU–U.S. Data Privacy Framework (where the recipient is certified) and/or the European Commission's Standard Contractual Clauses, together with supplementary measures where appropriate. Copies of the relevant safeguards can be requested via <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a>."
+          "html": "Our processors store data primarily in the United States. Transfers are safeguarded by the EU–U.S. Data Privacy Framework (where the recipient is certified) and/or the European Commission's Standard Contractual Clauses, together with supplementary measures where appropriate. Copies of the relevant safeguards can be requested via <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a>."
         }
       ]
     },
@@ -103,7 +103,7 @@ export default {
         },
         {
           "type": "p",
-          "html": "To exercise these rights, contact <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a>. We respond within one month, extendable by two further months for complex requests. Because we hold no account data, we may ask you to provide technical identifiers (e.g. your advertising ID) to locate records linked to your device."
+          "html": "To exercise these rights, contact <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a>. We respond within one month, extendable by two further months for complex requests. Because we hold no account data, we may ask you to provide technical identifiers (e.g. your advertising ID) to locate records linked to your device."
         }
       ]
     },
@@ -133,7 +133,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "Uninstalling the App deletes all locally stored data. To request deletion of server-side identifiers (analytics, crash, subscription verification), contact <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a>. Deleting the App does not cancel an active subscription; cancel it via your App Store or Google Play settings."
+          "html": "Uninstalling the App deletes all locally stored data. To request deletion of server-side identifiers (analytics, crash, subscription verification), contact <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a>. Deleting the App does not cancel an active subscription; cancel it via your App Store or Google Play settings."
         }
       ]
     },
@@ -143,7 +143,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "Material updates to this notice will be published in the App and/or on our website. Questions and requests: <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a> — Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., Istanbul, Türkiye."
+          "html": "Material updates to this notice will be published in the App and/or on our website. Questions and requests: <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a> — Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., Istanbul, Türkiye."
         }
       ]
     }

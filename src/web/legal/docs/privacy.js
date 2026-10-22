@@ -147,7 +147,7 @@ export default {
           "type": "list",
           "items": [
             "<strong>Deleting local data:</strong> Uninstalling the App removes all local data, including tickets and preferences.",
-            "<strong>Deleting server-side records:</strong> You may request deletion of identifiers linked to your analytics, crash and subscription-verification records by contacting <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a>; requests are fulfilled within 30 days at the latest.",
+            "<strong>Deleting server-side records:</strong> You may request deletion of identifiers linked to your analytics, crash and subscription-verification records by contacting <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a>; requests are fulfilled within 30 days at the latest.",
             "<strong>Resetting the advertising identifier:</strong> iOS: Settings → Privacy &amp; Security → Tracking; Android: Settings → Google → Ads — you can reset the identifier or opt out of personalization.",
             "<strong>Important:</strong> Deleting the App does not cancel a Premium subscription automatically. Cancel it from your App Store or Google Play subscription settings."
           ]
@@ -190,7 +190,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "For questions and requests: <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a> — Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., Istanbul, Türkiye."
+          "html": "For questions and requests: <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a> — Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., Istanbul, Türkiye."
         }
       ]
     }

@@ -150,7 +150,7 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., Istanbul, Türkiye — <a href=\"mailto:support@odit.com.tr\">support@odit.com.tr</a>"
+          "html": "Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş., Istanbul, Türkiye — <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a>"
         }
       ]
     }

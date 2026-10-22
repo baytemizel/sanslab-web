@@ -10,9 +10,9 @@ export const NAV_LINKS = ['oyunlar', 'ozellikler', 'sansformulu', 'ekranlar', 'p
 
 export const DEMO_ROUTE = { name: 'home' }
 
-// Yasal metinlerdeki iletişim adresiyle aynı
+// Destek adresi (yasal metinlerde de bu adres kullanılır)
 export const CONTACT = {
-  email: 'support@odit.com.tr',
+  email: 'support@oditteknoloji.com',
 }
 
 // Yasal sayfa bağlantıları dile göre i18n/*.js → footer.links içinde
