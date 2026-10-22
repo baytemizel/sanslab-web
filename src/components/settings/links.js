@@ -1,8 +1,8 @@
 // Ayarlar ve Premium ekranlarında kullanılan dış bağlantılar.
 export const LINKS = {
-  privacy: 'https://sanslab.app/gizlilik', // TODO: gerçek URL
-  terms: 'https://sanslab.app/kosullar', // TODO: gerçek URL
-  support: 'mailto:destek@sanslab.app', // TODO: gerçek destek adresi
+  privacy: '/gizlilik',
+  terms: '/kullanim-kosullari',
+  support: 'mailto:support@odit.com.tr',
 }
 
 // Figma "Sürüm" satırındaki değer.

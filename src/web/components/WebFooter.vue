@@ -14,16 +14,17 @@ import { CONTACT, DEMO_ROUTE, LEGAL_LINKS } from '../links'
       <div class="sutunlar">
         <nav class="sutun" aria-label="Uygulama">
           <h2>Uygulama</h2>
-          <a href="#oyunlar">Oyunlar</a>
-          <a href="#ozellikler">Özellikler</a>
-          <a href="#premium">Premium</a>
+          <RouterLink :to="{ name: 'landing', hash: '#oyunlar' }">Oyunlar</RouterLink>
+          <RouterLink :to="{ name: 'landing', hash: '#ozellikler' }">Özellikler</RouterLink>
+          <RouterLink :to="{ name: 'landing', hash: '#premium' }">Premium</RouterLink>
           <RouterLink :to="DEMO_ROUTE" target="_blank">Canlı demo</RouterLink>
         </nav>
         <nav class="sutun" aria-label="Yasal">
           <h2>Yasal</h2>
-          <a :href="LEGAL_LINKS.privacy">Gizlilik Politikası</a>
-          <a :href="LEGAL_LINKS.terms">Kullanım Koşulları</a>
-          <a :href="LEGAL_LINKS.deleteAccount">Hesap Silme</a>
+          <RouterLink :to="LEGAL_LINKS.privacy">Gizlilik Politikası</RouterLink>
+          <RouterLink :to="LEGAL_LINKS.terms">Kullanım Koşulları</RouterLink>
+          <RouterLink :to="LEGAL_LINKS.kvkk">KVKK Aydınlatma Metni</RouterLink>
+          <RouterLink :to="LEGAL_LINKS.deleteAccount">Hesap Silme</RouterLink>
         </nav>
         <div class="sutun">
           <h2>İletişim</h2>

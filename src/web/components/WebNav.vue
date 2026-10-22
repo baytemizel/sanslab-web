@@ -8,7 +8,7 @@ import { NAV_LINKS } from '../links'
 
 const open = ref(false)
 const route = useRoute()
-watch(() => route.hash, () => (open.value = false))
+watch(() => route.fullPath, () => (open.value = false))
 </script>
 
 <template>
@@ -16,9 +16,9 @@ watch(() => route.hash, () => (open.value = false))
     <div class="ic">
       <Logo class="logo" />
       <nav class="baglantilar" aria-label="Sayfa bölümleri">
-        <a v-for="l in NAV_LINKS" :key="l.id" :href="`#${l.id}`">{{ l.label }}</a>
+        <RouterLink v-for="l in NAV_LINKS" :key="l.id" :to="{ name: 'landing', hash: `#${l.id}` }">{{ l.label }}</RouterLink>
       </nav>
-      <a href="#indir" class="indir">İndir</a>
+      <RouterLink :to="{ name: 'landing', hash: '#indir' }" class="indir">İndir</RouterLink>
       <button
         type="button"
         class="menu-buton"
@@ -31,8 +31,10 @@ watch(() => route.hash, () => (open.value = false))
       </button>
     </div>
     <nav v-show="open" id="mobil-menu" class="mobil-menu" aria-label="Sayfa bölümleri">
-      <a v-for="l in NAV_LINKS" :key="l.id" :href="`#${l.id}`" @click="open = false">{{ l.label }}</a>
-      <a href="#indir" class="indir indir--mobil" @click="open = false">İndir</a>
+      <RouterLink v-for="l in NAV_LINKS" :key="l.id" :to="{ name: 'landing', hash: `#${l.id}` }" @click="open = false">
+        {{ l.label }}
+      </RouterLink>
+      <RouterLink :to="{ name: 'landing', hash: '#indir' }" class="indir indir--mobil" @click="open = false">İndir</RouterLink>
     </nav>
   </header>
 </template>

@@ -15,13 +15,15 @@ export const NAV_LINKS = [
 
 export const DEMO_ROUTE = { name: 'home' }
 
+// Yasal metinlerdeki iletişim adresiyle aynı
 export const CONTACT = {
-  email: 'support@oditteknoloji.com',
+  email: 'support@odit.com.tr',
 }
 
-// TODO: yasal sayfaların gerçek URL'leri
+// Rotalar: src/router.js · içerik: src/web/legal
 export const LEGAL_LINKS = {
   privacy: '/gizlilik',
   terms: '/kullanim-kosullari',
+  kvkk: '/kvkk',
   deleteAccount: '/hesap-silme',
 }

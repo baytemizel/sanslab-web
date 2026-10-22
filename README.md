@@ -60,6 +60,9 @@ src/
 | Rota | Figma |
 | --- | --- |
 | `/` | Web sitesi (Hero, Oyunlar, Özellikler, ŞansFormülü, Ekranlar, Premium, Şeffaflık + İndir) |
+| `/gizlilik`, `/kullanim-kosullari`, `/kvkk` | Yasal metinler (TR) — `src/web/legal` |
+| `/en/privacy`, `/en/terms`, `/en/gdpr` | Yasal metinler (EN) |
+| `/hesap-silme` | → `/gizlilik#hesap-ve-verilerin-silinmesi` |
 | `/uygulama/hosgeldin/1…4` | 01–04 Onboarding |
 | `/uygulama/giris` | 05 Giriş |
 | `/uygulama` | 06 Ana Sayfa |
@@ -75,4 +78,5 @@ src/
 
 - iOS durum çubuğu ve ana ekran çubuğu web'de çizilmez; yerine `env(safe-area-inset-*)` boşlukları kullanılır.
 - Giriş, satın alma ve hesap silme işlemleri arka uç olmadığı için demo olarak yerel durumu değiştirir (`TODO` yorumlarıyla işaretli).
-- Mağaza bağlantıları ve yasal sayfa adresleri `src/web/links.js` içinde `TODO` olarak işaretli.
+- Mağaza bağlantıları `src/web/links.js` içinde `TODO` olarak işaretli.
+- Yasal metinler `.docx` kaynaklarından `src/web/legal/docs/*.js` dosyalarına dönüştürüldü (Sürüm 1.0, 22 Ekim 2026); belge güncellenince bu dosyalar yeniden üretilmeli.

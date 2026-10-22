@@ -12,6 +12,23 @@ const routes = [
     component: () => import('./web/LandingView.vue'),
     meta: { title: 'ŞansLab — Şansını dene, kuponunu üret' },
   },
+  // Yasal metinler (src/web/legal) — mağaza kayıtlarında bu adresler kullanılır
+  ...[
+    ['/gizlilik', 'gizlilik', 'Gizlilik Politikası'],
+    ['/kullanim-kosullari', 'kullanim-sartlari', 'Kullanım Şartları'],
+    ['/kvkk', 'kvkk', 'KVKK Aydınlatma Metni'],
+    ['/en/privacy', 'privacy', 'Privacy Policy'],
+    ['/en/terms', 'terms', 'Terms of Use'],
+    ['/en/gdpr', 'gdpr', 'GDPR Privacy Notice'],
+  ].map(([path, docKey, title]) => ({
+    path,
+    name: `legal-${docKey}`,
+    component: () => import('./web/LegalView.vue'),
+    props: { docKey },
+    meta: { title },
+  })),
+  // Hesap yok; silme talimatları Gizlilik Politikası'nın 7. bölümünde.
+  { path: '/hesap-silme', redirect: { path: '/gizlilik', hash: '#hesap-ve-verilerin-silinmesi' } },
   // Uygulama / canlı demo — Figma "📱 Ekranlar — Koyu"
   {
     path: '/uygulama',
@@ -54,7 +71,8 @@ export const router = createRouter({
   routes,
   scrollBehavior(to, from, saved) {
     if (saved) return saved
-    if (to.hash) return { el: to.hash, behavior: 'smooth' }
+    // Yapışkan web menüsü: mobil 64px, masaüstü 80px (scroll-margin-top router'da dikkate alınmaz)
+    if (to.hash) return { el: to.hash, top: window.innerWidth >= 1024 ? 104 : 80, behavior: 'smooth' }
     return { top: 0 }
   },
 })
