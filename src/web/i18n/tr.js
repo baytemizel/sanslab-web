@@ -96,7 +96,7 @@ export default {
     eyebrow: 'PREMIUM',
     title: 'Temel ücretsiz, Premium ayrıcalık',
     free: { title: 'Ücretsiz', price: '$0', period: 'her zaman' },
-    paid: { title: 'Premium', price: '$4,90', period: '/ yıl  ·  ya da $0,49 / ay' },
+    paid: { title: 'Premium', price: '$9,99', period: '/ yıl  ·  ya da $0,99 / ay' },
     freeFeatures: [
       'Tüm 5 oyun',
       "Tekli ve 10'lu kupon",

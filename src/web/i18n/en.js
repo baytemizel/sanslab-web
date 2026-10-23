@@ -95,7 +95,7 @@ export default {
     eyebrow: 'PREMIUM',
     title: 'Free at its core, Premium for more',
     free: { title: 'Free', price: '$0', period: 'forever' },
-    paid: { title: 'Premium', price: '$4.90', period: '/ year  ·  or $0.49 / month' },
+    paid: { title: 'Premium', price: '$9.99', period: '/ year  ·  or $0.99 / month' },
     freeFeatures: [
       'All 5 games',
       'Single and 10-ticket generation',

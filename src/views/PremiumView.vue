@@ -23,8 +23,8 @@ const benefits = [
   'Geliştirmeyi destekle, yeni özelliklere erken eriş',
 ]
 const plans = [
-  { id: 'aylik', title: 'Aylık', price: '$0,49', note: 'Her ay yenilenir' },
-  { id: 'yillik', title: 'Yıllık', price: '$4,90', note: 'Aylık $0,41', badge: '%17 tasarruf' },
+  { id: 'aylik', title: 'Aylık', price: '$0,99', note: 'Her ay yenilenir' },
+  { id: 'yillik', title: 'Yıllık', price: '$9,99', note: 'Aylık $0,83', badge: '%16 tasarruf' },
 ]
 const selectedPlan = ref('yillik')
 
