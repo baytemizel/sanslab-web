@@ -1,7 +1,7 @@
 // Kaynak: SansLab_Gizlilik_Politikasi_TR.docx — dönüştürülmüş içerik, elle düzenlemeyin; belge güncellenirse yeniden üretin.
 export default {
   "title": "Gizlilik Politikası",
-  "updated": "Son güncelleme: 22 Ekim 2026 · Sürüm 1.0",
+  "updated": "Son güncelleme: 27 Ekim 2026 · Sürüm 1.1",
   "intro": [
     {
       "type": "p",
@@ -16,8 +16,8 @@ export default {
         {
           "type": "list",
           "items": [
-            "<strong>Hesap yoktur.</strong> ŞansLab'da üyelik veya hesap oluşturulmaz; ad, soyad, e-posta, telefon numarası, kesin konum veya rehber bilgisi toplamayız.",
-            "<strong>Kuponlarınız cihazınızda kalır.</strong> Üretilen sayı kombinasyonları ve tema/dil tercihleri yalnızca cihazınızda saklanır; sunucularımıza gönderilmez.",
+            "<strong>Hesap isteğe bağlıdır.</strong> ŞansLab'ı hesap açmadan kullanabilirsiniz. Dilerseniz Google veya Facebook hesabınızla oturum açarak kupon geçmişinizi ve favorilerinizi cihazlar arasında yedekleyip eşitleyebilirsiniz. Oturum açtığınızda adınız, e-posta adresiniz ve oturum sağlayıcının verdiği kullanıcı kimliği işlenir. Telefon numarası, kesin konum veya rehber bilgisi toplamayız.",
+            "<strong>Kuponlarınız.</strong> Oturum açmazsanız ürettiğiniz kuponlar ve tercihleriniz yalnızca cihazınızda saklanır. Oturum açarsanız kupon geçmişiniz ve favorileriniz hesabınıza bağlı olarak bulut sunucularımızda saklanır.",
             "<strong>Sınırlı teknik veri işlenir.</strong> Uygulamanın çalışması, iyileştirilmesi, hataların giderilmesi, reklam gösterimi ve satın almaların doğrulanması için hizmet sağlayıcı SDK'lar aracılığıyla sınırlı teknik veri işlenir."
           ]
         }
@@ -36,13 +36,24 @@ export default {
           "items": [
             "Cihaz bilgisi: cihaz modeli, işletim sistemi ve sürümü, cihaz dili, ülke/bölge, uygulama sürümü.",
             "Kullanım verileri: ekran görüntülenmeleri, özellik kullanımı (ör. üretim sayısı, seçilen mod) gibi anonim/kümelenmiş olay kayıtları.",
-            "Çökme ve performans kayıtları: hata türü, yığın izi (stack trace), çökme anındaki cihaz durumu.",
             "IP adresinden türetilen yaklaşık (şehir düzeyi) konum — hizmet sağlayıcılar tarafından güvenlik ve bölgesel raporlama amacıyla kısa süreli işlenebilir; kesin konum verisi toplanmaz."
           ]
         },
         {
           "type": "h3",
-          "text": "2.2 Reklam tanımlayıcısı"
+          "text": "2.2 Hesap verileri (yalnızca oturum açarsanız)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "<strong>Kimlik bilgileri:</strong> Google veya Facebook hesabınızdaki ad-soyad, e-posta adresi ve oturum sağlayıcının kullanıcı kimliği; ayrıca sistemimizin oluşturduğu kullanıcı kimliği.",
+            "<strong>Bulutta saklanan içerik:</strong> Kupon geçmişiniz ve favorileriniz.",
+            "Facebook ile oturum açtığınızda Meta, kendi SDK'sı aracılığıyla uygulama olayları ve cihaz tanımlayıcıları gibi teknik verileri işleyebilir."
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "2.3 Reklam tanımlayıcısı"
         },
         {
           "type": "p",
@@ -50,7 +61,7 @@ export default {
         },
         {
           "type": "h3",
-          "text": "2.3 Satın alma verileri"
+          "text": "2.4 Satın alma verileri"
         },
         {
           "type": "p",
@@ -58,19 +69,19 @@ export default {
         },
         {
           "type": "h3",
-          "text": "2.4 Yalnızca cihazınızda saklanan veriler"
+          "text": "2.5 Cihazınızda saklanan veriler"
         },
         {
           "type": "p",
-          "html": "Tema ve dil tercihiniz, ilk açılış bilgilendirme onayınız ve ürettiğiniz kuponlar yalnızca cihazınızın yerel depolamasında tutulur; tarafımıza iletilmez."
+          "html": "Tema ve dil tercihiniz ile ilk açılış bilgilendirme onayınız cihazınızın yerel depolamasında tutulur. Oturum açmadığınız sürece ürettiğiniz kuponlar da yalnızca cihazınızda saklanır ve tarafımıza iletilmez; oturum açarsanız kupon geçmişiniz ve favorileriniz 2.2'de açıklandığı şekilde hesabınızla eşitlenir."
         },
         {
           "type": "h3",
-          "text": "2.5 Toplamadığımız veriler"
+          "text": "2.6 Toplamadığımız veriler"
         },
         {
           "type": "p",
-          "html": "Ad-soyad, e-posta, telefon numarası, kesin konum, rehber, fotoğraf/medya, sağlık verisi veya özel nitelikli hiçbir kişisel veri toplanmaz."
+          "html": "Telefon numarası, kesin konum, rehber, fotoğraf/medya, sağlık verisi veya özel nitelikli hiçbir kişisel veri toplanmaz."
         }
       ]
     },
@@ -82,6 +93,7 @@ export default {
           "type": "list",
           "items": [
             "Uygulamanın temel işlevlerinin sunulması ve sürdürülmesi,",
+            "Oturum açmayı tercih eden kullanıcılar için hesabın yönetilmesi ile kupon geçmişi ve favorilerin yedeklenmesi ve cihazlar arasında eşitlenmesi,",
             "Hataların tespiti, giderilmesi ve performansın iyileştirilmesi,",
             "Kullanım istatistikleriyle ürün geliştirme kararlarının desteklenmesi,",
             "Ücretsiz sürümde reklam gösterimi ve reklam sahtekârlığının önlenmesi,",
@@ -102,7 +114,10 @@ export default {
         {
           "type": "list",
           "items": [
-            "<strong>Google Firebase (Analytics &amp; Crashlytics) — kullanım istatistikleri ve çökme kayıtları:</strong> <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">https://firebase.google.com/support/privacy</a>",
+            "<strong>Google Firebase Analytics — kullanım istatistikleri:</strong> <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">https://firebase.google.com/support/privacy</a>",
+            "<strong>Firebase Authentication ve Cloud Firestore (Google) — hesap yönetimi ve kupon geçmişi/favorilerin saklanması:</strong> <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">https://firebase.google.com/support/privacy</a>",
+            "<strong>Google Sign-In — Google hesabıyla oturum açma:</strong> <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">https://policies.google.com/privacy</a>",
+            "<strong>Meta (Facebook Login / Facebook SDK) — Facebook hesabıyla oturum açma:</strong> <a href=\"https://www.facebook.com/privacy/policy\" target=\"_blank\" rel=\"noopener\">https://www.facebook.com/privacy/policy</a>",
             "<strong>Google AdMob — reklam gösterimi:</strong> <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">https://policies.google.com/privacy</a>",
             "<strong>RevenueCat — abonelik doğrulama ve yönetimi:</strong> <a href=\"https://www.revenuecat.com/privacy\" target=\"_blank\" rel=\"noopener\">https://www.revenuecat.com/privacy</a>",
             "<strong>Apple App Store / Google Play — uygulama dağıtımı ve ödeme işlemleri:</strong> <a href=\"https://www.apple.com/legal/privacy/\" target=\"_blank\" rel=\"noopener\">https://www.apple.com/legal/privacy/</a>"
@@ -128,7 +143,7 @@ export default {
           "type": "list",
           "items": [
             "Analitik kullanım verileri: en fazla 14 ay (Google Analytics for Firebase saklama ayarı),",
-            "Çökme kayıtları: yaklaşık 90 gün,",
+            "Hesap verileri ve bulutta saklanan kuponlar/favoriler: hesabınız açık kaldığı sürece; hesap silme talebinden sonra en geç 30 gün içinde silinir,",
             "Satın alma/abonelik kayıtları: abonelik süresince ve ilgili mevzuattaki zamanaşımı/saklama süreleri boyunca,",
             "Cihazdaki yerel veriler: siz silinceye veya Uygulamayı kaldırıncaya kadar."
           ]
@@ -141,15 +156,41 @@ export default {
       "blocks": [
         {
           "type": "p",
-          "html": "<strong>ŞansLab'da hesap oluşturulmadığı için silinecek bir üyelik kaydı da bulunmaz. Verileriniz üzerindeki kontrolünüz için şu yollar mevcuttur:</strong>"
+          "html": "Bu bölüm, <strong>Odit Teknoloji ve İletişim Hizmetleri Ticaret A.Ş.</strong> tarafından geliştirilen <strong>ŞansLab</strong> uygulamasındaki hesabınızı ve verilerinizi nasıl sildirebileceğinizi açıklar."
+        },
+        {
+          "type": "p",
+          "html": "<strong>Hesabınızı silmek için:</strong>"
         },
         {
           "type": "list",
           "items": [
-            "<strong>Yerel verilerin silinmesi:</strong> Uygulamayı cihazınızdan kaldırdığınızda kuponlar ve tercihler dâhil tüm yerel veriler silinir.",
-            "<strong>Sunucu tarafı kayıtların silinmesi:</strong> <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a> adresine başvurarak analitik, çökme ve abonelik doğrulama kayıtlarınızla ilişkili tanımlayıcıların silinmesini talep edebilirsiniz; talebiniz en geç 30 gün içinde sonuçlandırılır.",
-            "<strong>Reklam tanımlayıcısının sıfırlanması:</strong> iOS: Ayarlar → Gizlilik ve Güvenlik → Takip; Android: Ayarlar → Google → Reklamlar üzerinden tanımlayıcıyı sıfırlayabilir veya kişiselleştirmeyi kapatabilirsiniz.",
-            "<strong>Önemli:</strong> Uygulamayı silmek Premium aboneliğinizi otomatik olarak iptal etmez. Aboneliği App Store veya Google Play hesabınızın abonelik ayarlarından iptal etmeniz gerekir."
+            "<strong>Uygulama içinden:</strong> ŞansLab'ı açın, <strong>Ayarlar → Hesap → Hesabımı sil</strong> adımlarını izleyin ve işlemi onaylayın.",
+            "<strong>Uygulamaya erişiminiz yoksa:</strong> Hesabınızda kullandığınız e-posta adresinden <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a> adresine \"ŞansLab hesap silme talebi\" konulu bir e-posta gönderin. Kimliğinizi doğruladıktan sonra hesabınızı sileriz."
+          ]
+        },
+        {
+          "type": "p",
+          "html": "<strong>Silinen veriler:</strong> Adınız, e-posta adresiniz, kullanıcı kimlikleriniz, bulutta saklanan kupon geçmişiniz ve favorileriniz. Talebiniz en geç 30 gün içinde tamamlanır."
+        },
+        {
+          "type": "p",
+          "html": "<strong>Saklanan veriler:</strong>"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Abonelik ve satın alma kayıtları, yasal saklama süreleri boyunca tutulur. Ödeme işlemi App Store veya Google Play üzerinden yapıldığı için kart bilgileriniz bizde bulunmaz.",
+            "Hesabınızla ilişkilendirilmemiş analitik veriler en fazla 14 ay saklanır."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "<strong>Hesabı silmeden veri silme:</strong> Hesabınızı korurken yalnızca bulutta saklanan kupon geçmişinizin/favorilerinizin ya da analitik ve abonelik doğrulama kayıtlarınızla ilişkili tanımlayıcıların silinmesini <a href=\"mailto:support@oditteknoloji.com\">support@oditteknoloji.com</a> adresinden talep edebilirsiniz.",
+            "<strong>Yerel veriler:</strong> Uygulamayı kaldırdığınızda cihazdaki tüm yerel veriler silinir.",
+            "<strong>Reklam tanımlayıcısı:</strong> iOS: Ayarlar → Gizlilik ve Güvenlik → Takip; Android: Ayarlar → Google → Reklamlar üzerinden tanımlayıcıyı sıfırlayabilir veya silebilirsiniz.",
+            "<strong>Önemli:</strong> Hesabınızı veya Uygulamayı silmek Premium aboneliğinizi iptal etmez. Aboneliği App Store veya Google Play hesabınızın abonelik ayarlarından (Google Play → Ödemeler ve abonelikler) iptal etmeniz gerekir."
           ]
         }
       ]
